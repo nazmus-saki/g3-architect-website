@@ -10,7 +10,25 @@
 .display-flex{
     display: flex;
 }
-/* Gray */
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700px;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+/* text function */
+.primary-text{
+    color: #ff900e;
+}
 .text-gray{
     color: #424242;
 }
@@ -65,9 +83,40 @@
 .banner-img{
     width: 100%;
 }
+/* team & feature style */
+.team{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+#quick{
+    font-weight: 500;
+}
 /* responsive midea query */
 @media screen and (max-width: 576px) {
-    .navbar , .nav-link{
+    .navbar, 
+    .nav-link,
+    .team{
         flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features{
+        margin-left: 20px;
+    }
+}
+
+/* medium size device */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .team{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50 auto;
     }
 }
